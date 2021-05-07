@@ -15,7 +15,6 @@ public class GAMECONTROLLER : MonoBehaviour
     }
     public void Start()
     {
-
         if (Carselection.selectedLevel == 1)
         {
             level1.SetActive(true);
@@ -86,11 +85,5 @@ public class GAMECONTROLLER : MonoBehaviour
         {
             trcuk2.SetActive(true);
         }
-
-
     }
-     
-    
-
-
 }

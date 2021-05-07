@@ -16,7 +16,6 @@ public class Carselection : MonoBehaviour
     public static string selectcarname;
     void Start()
     {
-        //  PlayerPrefs.SetInt("openedlevel",totalUnlock);
         Debug.Log(PlayerPrefs.GetInt("openedlevel"));
         for (int i = 0; i < PlayerPrefs.GetInt("openedlevel"); i++)
         {
@@ -25,6 +24,7 @@ public class Carselection : MonoBehaviour
     }
     public void Nextbutton()
     {
+        SoundManager.instance.Click();
         nextb.interactable = false;
         previousb.interactable = true;
 
@@ -34,6 +34,7 @@ public class Carselection : MonoBehaviour
     }
     public void previousbutton()
     {
+        SoundManager.instance.Click();
         nextb.interactable = true;
         previousb.interactable = false;
 
@@ -44,12 +45,14 @@ public class Carselection : MonoBehaviour
     {
         if (truck1.activeInHierarchy)
         {
+            SoundManager.instance.Click();
             selectcarname = "truck1";
             Debug.Log("Truck 1 Selected");
             panal.SetActive(true);
         }
         if (truck2.activeInHierarchy)
         {
+            SoundManager.instance.Click();
             selectcarname = "truck2";
             Debug.Log("Truck 2 Selected");
             panal.SetActive(true);
@@ -57,15 +60,22 @@ public class Carselection : MonoBehaviour
     }
     public void LevelSelection(int x)
     {
+        SoundManager.instance.Click();
         selectedLevel = x;
         SceneManager.LoadScene("GamePlay");
     }
     public void Home()
     {
+        SoundManager.instance.Click();
         SceneManager.LoadScene("Main Menu");
     }
     public void BackGame()
     {
+        SoundManager.instance.Click();
         SceneManager.LoadScene("Garage");
+    }
+     public void Add()
+    {
+        SoundManager.instance.Click();
     }
 }

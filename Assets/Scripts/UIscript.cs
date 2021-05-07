@@ -24,15 +24,16 @@ public class UIscript : MonoBehaviour
     {
         if (GamePaused)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 0;
         }
         else
         {
-            Time.timeScale = 2;
+            Time.timeScale = 1;
         }
     }
     public void PauseGame()
     {
+        SoundManager.instance.Click();
         GamePaused = true;
         PausePanal.SetActive(true);
         PauseButton.SetActive(false);
@@ -40,20 +41,24 @@ public class UIscript : MonoBehaviour
 
     public void ResumeGame()
     {
+        SoundManager.instance.Click();
         GamePaused = false;
         PausePanal.SetActive(false);
         PauseButton.SetActive(true);
     }
     public void RestartGame()
     {
+        SoundManager.instance.Click();
         SceneManager.LoadScene("GamePlay");
     }
     public void Home()
     {
+        SoundManager.instance.Click();
         SceneManager.LoadScene("Main Menu");
     }
     public void Next()
     {
+        SoundManager.instance.Click();
         if (Carselection.selectedLevel == 10)
         {
             SceneManager.LoadScene("Main Menu");
@@ -63,8 +68,11 @@ public class UIscript : MonoBehaviour
             Carselection.selectedLevel++;
             SceneManager.LoadScene("GamePlay");
             Carselection.totalUnlock++;
-            PlayerPrefs.SetInt("openedlevel",Carselection.totalUnlock);
-
+            PlayerPrefs.SetInt("openedlevel", Carselection.totalUnlock);
         }
+    }
+    public void Gearhandle()
+    {
+        SoundManager.instance.Click();
     }
 }

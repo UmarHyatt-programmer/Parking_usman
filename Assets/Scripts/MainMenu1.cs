@@ -9,13 +9,37 @@ public class MainMenu1 : MonoBehaviour
 {
     public void StartGame()
     {
-        Debug.Log("worked");
-
+        SoundManager.instance.Click();
         SceneManager.LoadScene("Garage");
     }
     public void ExitGame()
     {
+        SoundManager.instance.Click();
         Debug.Log("Quit");
         Application.Quit();
+    }
+    public void bgsound()
+    {
+        SoundManager.instance.Bg();
+    }
+    public void Privacypolicy()
+    {
+        SoundManager.instance.Click();
+    }
+    public void Share()
+    {
+        SoundManager.instance.Click();
+    }
+    public void Moregames()
+    {
+        SoundManager.instance.Click();
+    }
+    public void Addbutton()
+    {
+        SoundManager.instance.Click();
+    }
+    public void Removeads()
+    {
+        SoundManager.instance.Click();
     }
 }
