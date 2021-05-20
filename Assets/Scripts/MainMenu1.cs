@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu1 : MonoBehaviour
 {
+    void Start()
+    {
+        Debug.Log(PlayerPrefs.GetInt("openedlevel"));
+    }
     public void StartGame()
     {
         SoundManager.instance.Click();

@@ -54,6 +54,7 @@ public class UIscript : MonoBehaviour
     public void Home()
     {
         SoundManager.instance.Click();
+        SoundManager.instance.bgsource.mute=false;
         SceneManager.LoadScene("Main Menu");
     }
     public void Next()
@@ -67,8 +68,6 @@ public class UIscript : MonoBehaviour
         {
             Carselection.selectedLevel++;
             SceneManager.LoadScene("GamePlay");
-            Carselection.totalUnlock++;
-            PlayerPrefs.SetInt("openedlevel", Carselection.totalUnlock);
         }
     }
     public void Gearhandle()

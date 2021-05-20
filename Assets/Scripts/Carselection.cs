@@ -11,7 +11,6 @@ public class Carselection : MonoBehaviour
     public GameObject[] UnlockLevel;
     public static int totalUnlock = 1;
     public static int selectedLevel;
-
     public Button nextb, previousb;
     public static string selectcarname;
     void Start()

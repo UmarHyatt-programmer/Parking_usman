@@ -11,10 +11,11 @@ public class GAMECONTROLLER : MonoBehaviour
     Carselection carselection;
     public void Awake()
     {
-        
+        SoundManager.instance.bgsource.mute=true;
     }
     public void Start()
     {
+        Debug.Log(PlayerPrefs.GetInt("openedlevel"));
         if (Carselection.selectedLevel == 1)
         {
             level1.SetActive(true);

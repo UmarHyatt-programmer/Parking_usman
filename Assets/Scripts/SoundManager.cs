@@ -29,6 +29,7 @@ public class SoundManager : MonoBehaviour
     }
     public void Bg()
     {
+        DontDestroyOnLoad(gameObject);
         bgsource.Play();
     }
     public void Reward()
